@@ -328,11 +328,3 @@ La siguiente galería resume de forma visual las principales etapas del proyecto
 | EXISTS | Validaciones |
 |---|---|
 | ![EXISTS](docs/capturas_demostracion/11_exists.png) | ![Validaciones](docs/capturas_demostracion/12_validaciones.png) |
-
-> Las imágenes anteriores son material visual de demostración. Las capturas de ejecución real en SSMS deben añadirse por separado si el docente las solicita como evidencia de ejecución.
-
-## 12. Video de exposición
-
-**Video público de YouTube:** [PEGAR AQUÍ EL ENLACE]
-
-Los requisitos y el orden de exposición se encuentran en `docs/video_exposicion.md`.
