@@ -1,0 +1,38 @@
+PRUEBAS DE VALIDACIÓN DEFINIDAS
+===============================
+
+Las siguientes pruebas están implementadas en `sql/04_validaciones.sql`.
+
+1. CHECK Precio > 0
+   Prueba: insertar un producto con precio negativo.
+   Comportamiento definido: la restricción impide el registro.
+
+2. CHECK Stock >= 0
+   Prueba: insertar un producto con stock negativo.
+   Comportamiento definido: la restricción impide el registro.
+
+3. UNIQUE Cliente.Documento
+   Prueba: insertar un documento ya registrado.
+   Comportamiento definido: la restricción impide el duplicado.
+
+4. UNIQUE Cliente.Email
+   Prueba: insertar un correo ya registrado.
+   Comportamiento definido: la restricción impide el duplicado.
+
+5. FOREIGN KEY Producto.IdCategoria
+   Prueba: registrar un producto con una categoría inexistente.
+   Comportamiento definido: la clave foránea impide el registro.
+
+6. CHECK DetalleVenta.Cantidad > 0
+   Prueba: registrar una cantidad igual a cero.
+   Comportamiento definido: la restricción impide el registro.
+
+7. CHECK Descuento BETWEEN 0 AND 100
+   Prueba: registrar un descuento de 120.
+   Comportamiento definido: la restricción impide el registro.
+
+8. CHECK MetodoPago
+   Prueba: registrar un método de pago fuera de la lista permitida.
+   Comportamiento definido: la restricción impide el registro.
+
+Las evidencias visuales de estas pruebas deben obtenerse al ejecutar el script en Microsoft SQL Server Management Studio.

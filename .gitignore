@@ -1,0 +1,15 @@
+# SQL Server generated/backups
+*.bak
+*.trn
+*.mdf
+*.ldf
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary
+*.tmp
+~$*
