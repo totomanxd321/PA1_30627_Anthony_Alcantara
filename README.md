@@ -47,5 +47,7 @@ Las claves simétricas permiten cifrar y descifrar datos con la misma clave. Un 
 ## Conclusiones
 La auditoría por sentencia conserva los valores de cada línea incluso en cambios masivos. Centralizar el importe evita discrepancias entre el detalle y los totales. La agrupación expresa directamente el informe comercial y conserva a los clientes sin ventas. Los roles permiten asignar las dos responsabilidades sin conceder control general de la base.
 
+**Ejecución verificada.** [Salida real de SQL Server](evidencias/resultados.txt) · [Registro de ejecución en GitHub](https://github.com/totomanxd321/PA1_30627_Anthony_Alcantara/actions/runs/45091888625). El motor registró seis eventos de prueba, ambos métodos devolvieron los tres saldos previstos y las dos operaciones restringidas produjeron el error 229.
+
 ## Exposición individual
 Video público de YouTube: pendiente de publicación.
