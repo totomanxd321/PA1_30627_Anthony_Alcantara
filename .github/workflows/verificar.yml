@@ -1,0 +1,27 @@
+name: Pruebas SQL Server PA4
+on:
+  push:
+    branches: [PA4-30627]
+permissions:
+  contents: read
+jobs:
+  verificar:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ejecutar con autenticación de Windows
+        shell: pwsh
+        run: |
+          sqllocaldb start MSSQLLocalDB
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          sqlcmd -S "(localdb)\MSSQLLocalDB" -E -b -f 65001 -i sql/01_modelo.sql
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          sqlcmd -S "(localdb)\MSSQLLocalDB" -E -b -f 65001 -i sql/02_pruebas.sql -o resultados.txt
+          $estado = $LASTEXITCODE
+          Get-Content resultados.txt
+          exit $estado
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: resultados-sql-server
+          path: resultados.txt
