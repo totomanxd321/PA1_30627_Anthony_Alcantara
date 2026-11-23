@@ -13,6 +13,14 @@ Una distribuidora de útiles necesita saber quién registró o modificó una lí
 ## Modelo y procedimiento
 Cada operación corresponde a una línea de venta de un producto a un cliente. Las claves foráneas garantizan que ambos existan. La línea conserva el precio pactado y la cantidad debe ser positiva. El historial mantiene el identificador de la operación sin una clave foránea hacia ella para conservar el registro después de una eliminación. Los nombres y movimientos del caso son ficticios.
 
+```mermaid
+flowchart TD
+  C[Cliente] -->|realiza operaciones| O[Operacion]
+  P[Producto] -->|figura en operaciones| O
+  O -->|INSERT, UPDATE o DELETE| T[tr_Operacion_Historial]
+  T -->|registra valores anteriores y posteriores| H[Historial]
+```
+
 ### Sesión 11 · Auditoría automática
 El desencadenante AFTER registra una fila por operación afectada. Empareja inserted y deleted por la clave IDENTITY. Una clave presente solo en inserted identifica un alta, presente en ambas identifica una actualización y presente solo en deleted identifica una baja. Se conservan cliente, producto, cantidad y precio anteriores y posteriores, usuario efectivo y hora UTC. El registro se genera incluso cuando una sentencia cambia varias filas y participa en la misma transacción que el movimiento original.
 
