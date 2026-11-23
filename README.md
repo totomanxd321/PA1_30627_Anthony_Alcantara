@@ -1,6 +1,8 @@
 # PA4 · Gestión y auditoría de operaciones comerciales
 **ISIL · Programación Avanzada de Base de Datos · 30627 · Periodo 202620**
 
+**Modalidad:** individual, autorizada por el docente.
+
 | Integrante | Participación |
 |---|---|
 | Anthony Fernando Alcantara Valencia | Desarrollo individual del modelo, programación T-SQL, diseño de pruebas, seguridad y sustentación. |
@@ -48,6 +50,9 @@ Las claves simétricas permiten cifrar y descifrar datos con la misma clave. Un 
 La auditoría por sentencia conserva los valores de cada línea incluso en cambios masivos. Centralizar el importe evita discrepancias entre el detalle y los totales. La agrupación expresa directamente el informe comercial y conserva a los clientes sin ventas. Los roles permiten asignar las dos responsabilidades sin conceder control general de la base.
 
 **Ejecución verificada.** [Salida real de SQL Server](evidencias/resultados.txt) · [Registro de ejecución en GitHub](https://github.com/totomanxd321/PA1_30627_Anthony_Alcantara/actions/runs/45091888625). El motor registró seis eventos de prueba, ambos métodos devolvieron los tres saldos previstos y las dos operaciones restringidas produjeron el error 229.
+
+## Seguimiento del trabajo
+[Registro de avances y evidencias por sesión](evidencias/seguimiento.md).
 
 ## Exposición individual
 Video público de YouTube: pendiente de publicación.
